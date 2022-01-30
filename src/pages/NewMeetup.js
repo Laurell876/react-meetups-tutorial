@@ -19,15 +19,10 @@ function NewMeetupPage() {
         body,
         headers,
       };
-
       await fetch(url, config);
-
       navigate("/", { replace: true });
-
     } catch (e) {
-      console.log(
-        "An error occurred while adding meetup. Error: " + JSON.stringify(e)
-      );
+      console.log(e);
     }
   }
 
